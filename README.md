@@ -1,36 +1,41 @@
 PYTHON WEB DEVELOPMENT TASK 
 =====
 
-Description
-====
+## Description ##
+
 
 ### It is a website design displaying data sorted by state and city. ###
 
 **FEATURES:** 
 
-+ Left Panel:
+### Left Panel: ###
 
 :ballot_box_with_check: Smaller width showing for each state number of row, city name, number of people living there.
+
 :ballot_box_with_check: Each count links to right panel with details for each city
+
 :ballot_box_with_check: Shows only cities with number of people >= 2
+
 :ballot_box_with_check: States are sorted alphabetically
+
 :ballot_box_with_check: Cities in each table are sorted by counts
 
-+ Right Panel:
+###  Right Panel: ###
 
 :ballot_box_with_check: Shows people from each city
+
 :ballot_box_with_check: Shows details for each person (Name, Surname, Email), sorted alphabetically by first name
 
 
-Getting Started
-====
+## Getting Started ##
 
-1. Install requirements 
+
+**1. Install requirements** 
 ```   
 pip install -r requirements.txt
 ```
 
-2. Edit project settings
+**2. Edit project settings**
 
 + Open settings file ./web_task/web_task/settings.py
 + Edit Database configurations with your MySQL configurations - Search for DATABASES section.
@@ -48,7 +53,7 @@ DATABASES = {
 ```
 + Save the file
 
-3. Run server 
+**3. Run server** 
 + Make migrations
 
 ```
@@ -60,4 +65,4 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-4. Open [http://localhost:8000](http://localhost:8000) in browser
+**4. Open [http://localhost:8000](http://localhost:8000) in browser**
