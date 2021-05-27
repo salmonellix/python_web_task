@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Addresses</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+    {% include 'static/styles.css' %}
+    </style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+    <div class="jumbotron text-center">
+        <h1>Python web development task</h1>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-4">
+
+
+            {% if states %}
+
+            {% for state in states %}
+            <h4>{{ state.state }}</h4>
+
+                  <table class="table">
+                      <thead class="thead-light">
+                        <tr>
+                          <th scope="col">Nbr</th>
+                          <th scope="col">City</th>
+                          <th scope="col">Count</th>
+
+                        </tr>
+                      </thead>
+
+                      <tbody>
+
+                      {% for city in addresses %}
+                      {% if city.state == state.state and city.dcount >= 2 %}
+                        <tr onclick="showHideList('hide_list1');">
+                          <th id="nbr" scope="row"></th>
+                          <td>{{ city.city}}</td>
+                          <td ><a href="{% url 'details' city.state city.city  %}" onclick="showHideList('hide_list1');">{{ city.dcount}}</a></td>
+                        </tr>
+                      {% endif %}
+                      {% endfor %}
+
+                      </tbody>
+                  </table>
+
+            {% endfor %}
+            {% endif %}
+
+
+
+    </div>
+
+          <div id = 'hide_list1' class="col-sm-8">
+          {% block content %}
+
+
+          {% endblock %}
+          </div>
+
+
+
+
+</div>
+</div>
+
+</body>
+
+</html>

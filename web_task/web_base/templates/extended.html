@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+<head>
+
+</head>
+<body>
+
+
+	{% block content %}
+    <h3>{{state}} {{city}}</h3>
+    {% for person in people %}
+
+
+          <div class="container bootstrap snippets bootdey">
+              <div  class="panel">
+                <div class="panel-body p-t-10">
+                    <div class="media-main">
+
+                        <div class="info">
+                            <h5>{{person.first_name}} {{person.last_name}}</h5>
+                            <p class="text-muted">{{person.email}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+              </div>
+
+
+    {% endfor %}
+	{% endblock %}
+
+
+
+</body>
+</html>
