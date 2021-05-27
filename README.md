@@ -4,7 +4,7 @@ PYTHON WEB DEVELOPMENT TASK
 ## Description ##
 
 
-### It is a website design displaying data sorted by state and city. ###
+It is a website design displaying data sorted by state and city. 
 
 **FEATURES:** 
 
