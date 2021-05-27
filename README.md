@@ -53,7 +53,11 @@ DATABASES = {
 ```
 + Save the file
 
-**3. Run server** 
+**3. Create database locally** 
++ Use web_task/python_db.sql file to create a required database locally
+
+
+**4. Run server** 
 + Make migrations
 
 ```
@@ -65,4 +69,4 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-**4. Open [http://localhost:8000](http://localhost:8000) in browser**
+**5. Open [http://localhost:8000](http://localhost:8000) in browser**
