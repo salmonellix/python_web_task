@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import *
 from django import template
 from django.db.models import Count
@@ -12,7 +11,6 @@ def home(request):
     addresses = Addresses.objects.values('city','state').annotate(dcount=Count('city')).order_by('-dcount')
     states = Addresses.objects.values('state').annotate(dcount=Count('state')).order_by('state')
 
-    # addresses = Addresses.objects.order_by('state')
 
     context = {'states':states, 'addresses':addresses}
     return render(request, 'main.html', context)
